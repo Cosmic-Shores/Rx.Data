@@ -5,8 +5,8 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/Cosmic-Shores/System.Reactive.Data</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Cosmic-Shores/System.Reactive.Data</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Cosmic-Shores/Rx.Data</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Cosmic-Shores/Rx.Data</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

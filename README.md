@@ -1,1 +1,1 @@
-# System.Reactive.Data
+# Rx.Data
