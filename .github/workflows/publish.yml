@@ -1,0 +1,30 @@
+name: CI Publish
+
+on:
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .Net Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.101
+      - name: Build
+        run: dotnet build --configuration Release
+      - name: Publish System.Reactive.Extendibility
+        uses: brandedoutcast/publish-nuget@v2.5.2
+        with:
+          PROJECT_FILE_PATH: src/System.Reactive.Extendibility/System.Reactive.Extendibility.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      - name: Publish System.Reactive.Data
+        uses: brandedoutcast/publish-nuget@v2.5.2
+        with:
+          PROJECT_FILE_PATH: src/System.Reactive.Data/System.Reactive.Data.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}

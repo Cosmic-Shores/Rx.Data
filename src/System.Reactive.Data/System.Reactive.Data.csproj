@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <Description>Useful types and extensions for mixing reactive and non reactive code, build on rx.net.</Description>
+    <PackageTags>rx ReactiveProperty ReactiveDictionary ReactiveCollection</PackageTags>
+    <Version>1.0.0</Version>
+    <Authors>Jonas Fischer (fijo.com@gmail.com)</Authors>
+    <Company>Churlish Games</Company>
+    <Copyright>Copyright (c) 2021 Jonas Fischer (fijo.com@gmail.com)</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\System.Reactive.Extendibility\System.Reactive.Extendibility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
