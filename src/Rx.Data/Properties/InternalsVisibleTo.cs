@@ -1,2 +1,4 @@
-﻿[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("System.Reactive.Unity")]
-[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Sy5tem.Reactive.Unity.Tests")]
+﻿using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("Rx.Unity")]
+[assembly: InternalsVisibleTo("Rx.Unity.Tests")]
