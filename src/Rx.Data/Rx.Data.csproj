@@ -8,9 +8,6 @@
     <Authors>Jonas Fischer (fijo.com@gmail.com)</Authors>
     <Company>Churlish Games</Company>
     <Copyright>Copyright (c) 2021 Jonas Fischer (fijo.com@gmail.com)</Copyright>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>Rx.Unity.Tests.snk</AssemblyOriginatorKeyFile>
-    <DelaySign>false</DelaySign>
   </PropertyGroup>
 
   <ItemGroup>
