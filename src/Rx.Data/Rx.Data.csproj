@@ -4,10 +4,13 @@
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <Description>Useful types and extensions for mixing reactive and non reactive code, build on rx.net.</Description>
     <PackageTags>rx ReactiveProperty ReactiveDictionary ReactiveCollection</PackageTags>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>Jonas Fischer (fijo.com@gmail.com)</Authors>
     <Company>Churlish Games</Company>
     <Copyright>Copyright (c) 2021 Jonas Fischer (fijo.com@gmail.com)</Copyright>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Rx.Unity.Tests.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
 
   <ItemGroup>

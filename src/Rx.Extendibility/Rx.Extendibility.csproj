@@ -6,7 +6,7 @@
     <LangVersion>8.0</LangVersion>
     <Description>A helper library for extending the System.Reactive more easily.</Description>
     <PackageTags>rx extending</PackageTags>
-    <Version>1.0.0</Version>
+    <Version>1.0.2</Version>
     <Copyright>Copyright (c) .NET Foundation and Contributors.</Copyright>
     <Authors>.NET Foundation and Contributors</Authors>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -22,10 +22,6 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-  </ItemGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="System.Reactive" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
