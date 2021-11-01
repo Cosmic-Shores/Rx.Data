@@ -2,7 +2,6 @@
   <Import Project=".\References.build.props" />
   <PropertyGroup>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>1591</NoWarn>
     <DefaultLanguage>en-US</DefaultLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>

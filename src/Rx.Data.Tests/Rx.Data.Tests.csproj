@@ -2,7 +2,7 @@
   <Import Project="..\References.build.props" />
   
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <IsPackable>false</IsPackable>
     <VSTestLogger>trx%3bLogFileName=$(MSBuildProjectName).trx</VSTestLogger>
     <VSTestResultsDirectory>$(MSBuildThisFileDirectory)../../reports</VSTestResultsDirectory>
