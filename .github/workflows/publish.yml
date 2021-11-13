@@ -45,6 +45,6 @@ jobs:
         with:
           name: NUnitTests
           artifact: test-results
-          path: *.trx
+          path: '*.trx'
           reporter: dotnet-trx
           token: ${{ github.token }}
