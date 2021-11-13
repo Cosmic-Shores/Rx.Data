@@ -46,8 +46,10 @@ jobs:
         with:
           name: test-results
           path: reports/Rx.Data.Tests.trx
+      - run: echo $GITHUB_WORKSPACE
       - uses: dorny/test-reporter@v1
         with:
           name: NUnit Tests                  # Name of the check run which will be created
-          path: reports/*.trx                    # Path to test results (inside artifact .zip)
+          path: reports/Rx.Data.Tests.trx                    # Path to test results (inside artifact .zip)
           reporter: dotnet-trx              # Format of test results
+          working-directory:
