@@ -41,9 +41,12 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: dorny/test-reporter@v1
-      with:
-        artifact: test-results            # artifact name
-        name: NUnit Tests                  # Name of the check run which will be created
-        path: '*.trx'                     # Path to test results (inside artifact .zip)
-        reporter: dotnet-trx              # Format of test results
+      - uses: actions/download-artifact@v2
+        with:
+          name: test-results
+          path: reports/Rx.Data.Tests.trx
+      - uses: dorny/test-reporter@v1
+        with:
+          name: NUnit Tests                  # Name of the check run which will be created
+          path: reports/*.trx                    # Path to test results (inside artifact .zip)
+          reporter: dotnet-trx              # Format of test results
