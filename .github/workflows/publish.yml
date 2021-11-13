@@ -25,7 +25,7 @@ jobs:
         with:
           name: test-results
           path: reports/Rx.Data.Tests.trx
-          retention-days: 1
+          retention-days: 30
       - name: Publish Rx.Extendibility
         uses: brandedoutcast/publish-nuget@v2.5.2
         with:
@@ -36,15 +36,3 @@ jobs:
         with:
           PROJECT_FILE_PATH: src/Rx.Data/Rx.Data.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-  report:
-    if: ${{ always() }}
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: dorny/test-reporter@v1.5.0
-        with:
-          name: NUnitTests
-          artifact: test-results
-          path: '*.trx'
-          reporter: dotnet-trx
-          token: ${{ github.token }}
