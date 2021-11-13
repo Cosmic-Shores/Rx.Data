@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <LangVersion>8.0</LangVersion>
-    <Description>A helper library for extending the System.Reactive more easily.</Description>
+    <Description>A helper library for extending System.Reactive using 3rd party libraries more easily.</Description>
     <PackageTags>rx extending</PackageTags>
     <Version>1.0.2</Version>
     <Copyright>Copyright (c) .NET Foundation and Contributors.</Copyright>
