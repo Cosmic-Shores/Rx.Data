@@ -7,7 +7,7 @@
     <LangVersion>8.0</LangVersion>
     <Description>A helper library for extending System.Reactive using 3rd party libraries more easily.</Description>
     <PackageTags>rx extending</PackageTags>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Copyright>Copyright (c) .NET Foundation and Contributors.</Copyright>
     <Authors>.NET Foundation and Contributors</Authors>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>

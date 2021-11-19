@@ -45,9 +45,7 @@ namespace Rx.Extendibility.Observables {
             _upstream.Disposable = upstream;
         }
 
-        protected void DisposeUpstream() {
-            _upstream.Dispose();
-        }
+        protected void DisposeUpstream() => _upstream.Dispose();
     }
 
     /// <summary>
@@ -57,8 +55,7 @@ namespace Rx.Extendibility.Observables {
     /// <typeparam name="TSource"></typeparam>
     /// <remarks>Implementations of sinks are responsible to enforce the message grammar on the associated observer. Upon sending a terminal message, a pairing Dispose call should be made to trigger cancellation of related resources and to mute the outgoing observer.</remarks>
     public abstract class OperatorSink<TSource, TTarget> : OperatorSink<TTarget>, IObserver<TSource> {
-        protected OperatorSink(IObserver<TTarget> observer) : base(observer) {
-        }
+        protected OperatorSink(IObserver<TTarget> observer) : base(observer) {}
 
         public virtual void Run(IObservable<TSource> source) {
             SetUpstream(source.SubscribeSafe(this));
@@ -69,21 +66,5 @@ namespace Rx.Extendibility.Observables {
         public virtual void OnError(Exception error) => ForwardOnError(error);
 
         public virtual void OnCompleted() => ForwardOnCompleted();
-
-        public IObserver<TTarget> GetForwarder() => new _(this);
-
-        private struct _ : IObserver<TTarget> {
-            private readonly OperatorSink<TSource, TTarget> _forward;
-
-            public _(OperatorSink<TSource, TTarget> forward) {
-                _forward = forward;
-            }
-
-            public void OnNext(TTarget value) => _forward.ForwardOnNext(value);
-
-            public void OnError(Exception error) => _forward.ForwardOnError(error);
-
-            public void OnCompleted() => _forward.ForwardOnCompleted();
-        }
     }
 }
